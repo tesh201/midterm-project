@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="propertydetails.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="propertyTitle">Property Title</h1>
+        <div class="price-location">
+            <span id="propertyPrice">KSh 0</span>
+            <p id="propertyLocation">Location</p>
+        </div>
+        <div class="image-gallery">
+            <div class="main-image">
+                <img id="mainImage" src="placeholder.jpg" alt="Main Property Image">
+            </div>
+            <div class="thumbnail-images" id="thumbnailContainer">
+                <!-- Thumbnails will be dynamically inserted here -->
+            </div>
+        </div>
+        <div class="property-details">
+            <div class="detail-item"><strong id="propertyType">Type</strong></div>
+            <div class="detail-item"><strong id="propertyCategory">Category</strong></div>
+            <div class="detail-item"><strong id="propertyFeatures">Features</strong></div>
+        </div>
+        <div class="description">
+            <h2>Property Description</h2>
+            <p id="propertyDescription">
+                Property description will be displayed here.
+            </p>
+        </div>
+    </div>
+    <script src="details.js"></script>
+</body>
+</html>

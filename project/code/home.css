@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.section_container {
+    max-width: 1200px;
+    padding: 5rem 1rem;
+    margin: auto;
+}
+
+.section_header {
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.section_subheader {
+    color: #767268;
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login {
+    color: #333333;
+    border: 2px solid #767268;
+    background-color: transparent;
+    border-radius: 30px;
+    width: 100px;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+}
+
+.signup {
+    color:white;
+    border: 2px solid  #1b344d;
+    background-color: white;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+}
+
+.login:hover {
+    background-color: #f8f8f8;
+}
+
+.signup:hover {
+    background-color: #4b4dbf;
+    border-color: #4b4dbf;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+   
+    
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlogo {
+    width: 8%;
+    margin-right: 100px;
+    float: left;
+}
+
+.navlogo a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #5d5fef;
+}
+
+.navlink {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link a {
+    padding: 5px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.link a:hover {
+    color: #5d5fef;
+}
+
+.navbutton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem; 
+}
+
+.header {
+    background-color: #f8f8f8;
+}
+
+.headercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.headercontent {
+    padding: 5rem 1rem;
+    width: 50%;
+}
+
+.headercontent h1 {
+    margin-bottom: 1rem;
+    margin-top: 1px;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 5rem;
+    color: #333333;
+}
+
+.headercontent p {
+    margin-bottom: 2rem;
+    color: #767268;
+    font-size: 1.125rem;
+
+}
+
+.headerbuttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.headerbuttons .buy {
+    color: #333333;
+    border: 2px solid #767268;
+    background-color: transparent;
+    border-radius: 30px;
+    width: 100px;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+
+.headerbuttons .buy:hover {
+    background-color: #1b344d; /* Dark Blue */
+}
+
+.headerbuttons .learn:hover {
+    background-color: #1b344d; /* Dark Blue */
+    color: white;
+}
+
+.headerimage {
+    width: 50%;
+}
+
+.headerimage img {
+    height: 130%;
+    width: 130%;
+    object-fit: cover;
+    border-radius: 40px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="signupbox">
+        <div class="signupheader">
+            <header> Sign Up</header>
+        </div>
+
+        <div class="inputbox">
+            <input type="text" class="inputfield" id="name" placeholder="Name" autocomplete="off" required>
+        </div>
+
+        <div class="inputbox">
+            <input type="email" class="inputfield" id="email" placeholder="Email" autocomplete="off" required>
+        </div>
+
+        <div class="inputbox">
+            <input type="password" class="inputfield" id="password" placeholder="Password" autocomplete="off" required>
+        </div>
+
+        <div class="inputsubmit">
+            <button class="submitbutton" id="signup"></button>
+            <label for="signup">Sign Up</label>
+        </div>
+        <div class="loginlink">
+            <p>Already have an account? <a href="form.html">Log In</a></p>
+        </div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="database.js"></script>
+</body>
+</html>
