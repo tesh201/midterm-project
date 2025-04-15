@@ -11,6 +11,43 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    main.container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2em;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .form-group {
+      margin-bottom: 1.5em;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
     }
     .custom-file-label {
       display: inline-block;
@@ -24,10 +61,35 @@
     #image {
       display: none;
     }
+    .submit-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #218838;
+    }
     .message {
       margin-top: 1em;
       font-weight: 600;
       color: green;
+    }
+    .image-preview {
+      margin-top: 1em;
+      max-width: 100%;
+      height: auto;
+      display: none;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #f1f1f1;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -41,12 +103,12 @@
       <form id="listingForm" enctype="multipart/form-data" method="POST">
         <div class="form-group">
           <label for="address">Address:</label>
-          <input type="text" id="address" name="address" required aria-required="true" />
+          <input type="text" id="address" name="address" placeholder="Enter address" required aria-required="true" />
         </div>
 
         <div class="form-group">
           <label for="title">Title:</label>
-          <input type="text" id="title" name="title" required aria-required="true" />
+          <input type="text" id="title" name="title" placeholder="Enter title" required aria-required="true" />
         </div>
 
         <div class="form-group">
@@ -61,27 +123,28 @@
 
         <div class="form-group">
           <label for="description">Description:</label>
-          <textarea id="description" name="description" required aria-required="true"></textarea>
+          <textarea id="description" name="description" placeholder="Provide a detailed description" required aria-required="true"></textarea>
         </div>
 
         <div class="form-group">
-          <label for="price">Price:</label>
-          <input type="number" id="price" name="price" step="0.01" min="0" required aria-required="true" />
+          <label for="price">Price ($):</label>
+          <input type="number" id="price" name="price" placeholder="e.g., 100000" step="0.01" min="0" required aria-required="true" />
         </div>
 
         <div class="form-group">
           <label for="features">Features:</label>
-          <textarea id="features" name="features" required aria-required="true"></textarea>
+          <textarea id="features" name="features" placeholder="List property features (comma-separated)" required aria-required="true"></textarea>
         </div>
 
         <div class="form-group">
           <label for="image">Image:</label>
           <label for="image" class="custom-file-label">Upload Image</label>
           <input type="file" id="image" name="image" accept="image/*" required aria-required="true" />
+          <img id="imagePreview" class="image-preview" alt="Image Preview" />
         </div>
 
         <button type="submit" class="submit-btn">Add Listing</button>
-        <div class="message" id="formMessage"></div>
+        <div class="message" id="formMessage" role="status"></div>
       </form>
     </section>
 
@@ -89,9 +152,3 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Company. All rights reserved.</p>
-  </footer>
-
-  <script src="admin.js"></script>
-</body>
-</html>
